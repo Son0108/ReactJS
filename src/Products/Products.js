@@ -4,7 +4,7 @@ import './Products.css'
 
 function Products({products}) {
   return (
-    <div>
+    <div className=''>
         <table>
             <thead>
               <tr>
@@ -17,9 +17,11 @@ function Products({products}) {
               </tr>
             </thead>
             <tbody >
-                {products.map((product) => (
+                {
+                products.map((product) => (
                     <Product key={product.id} Product={product}/>
-                ))}
+                ))
+                }
             </tbody>
         </table>
     </div>
