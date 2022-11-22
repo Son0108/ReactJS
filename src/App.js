@@ -18,7 +18,7 @@ function App() {
   
   return (
     <div className="App">
-      <Products products={products}/>
+      <Products products={products} setProducts={setProducts}/>
     </div>
   );
 }
