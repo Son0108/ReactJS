@@ -4,12 +4,13 @@ import './Products.css'
 
 function Products({products, setProducts}) {
   const deleteProduct = async (id) => {
-    console.log(id);
     await fetch(`http://localhost:5050/products/${id}`, {
       method: "DELETE",
     });
     setProducts(products.filter((product) => product.id !== id));
   };
+
+  
   return (
     <div className=''>
         <table>
