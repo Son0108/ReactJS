@@ -1,34 +1,27 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../Buttons/Button'
-import axios from 'axios';
 import './Popup.css'
 
-function Popup({Props,idSelect, trigger, setTrigger}) {
+function Popup({Props, idSelect, trigger, setTrigger, handleSave}) {
 
     const [detail,setDetail] = useState({
-        id: "",
-        title:"",
-        description:"",
-        price:"",
-        discountPercentage:"",
-        rating:"",
-        stock:"",
-        brand:"",
-        category:"",
-        thumbnail:"",
-        image:""
+        id: Props.id,
+        title:Props.title,
+        description:Props.description,
+        price:Props.price,
+        discountPercentage:Props.discountPercentage,
+        rating:Props.rating,
+        stock:Props.stock,
+        brand:Props.brand,
+        category:Props.category,
+        thumbnail:Props.thumbnail,
+        image:Props.image
     });
-    const [products, setProducts] = useState([]);
 
     const handleChange = (e) => {
         setDetail((detail) => ({...detail, [e.target.id]:e.target.value}))
-        console.log(detail)
     }
 
-    const handleSave= async() => {
-        const response = await axios.post(`http://localhost:5050/products/${idSelect}`, detail)
-    this.setState({ articleId: response.data.id });
-      }
     return (trigger) ? (
     <div className='popup'>
         <div className='popup_inner'>
@@ -43,7 +36,7 @@ function Popup({Props,idSelect, trigger, setTrigger}) {
             </div>
         ))}
             <div className='button_popup'>
-                <Button title="Save" handle={() => handleSave()} color="green"/>
+                <Button title="Save" handle={() => handleSave(idSelect, detail, setTrigger)} color="green"/>
                 <Button title="Cancel" handle={() => setTrigger(false)} color="red"/>   
             </div>
         </div>

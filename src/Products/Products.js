@@ -9,8 +9,24 @@ function Products({products, setProducts}) {
     });
     setProducts(products.filter((product) => product.id !== id));
   };
-
   
+  const handleSave = async (idSelect, detail, setTrigger) => {
+    await fetch(`http://localhost:5050/products/${idSelect}`,{
+      method:'PUT',
+      body: JSON.stringify(detail),
+      headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+      }
+    });
+    setTrigger(false)
+    const fetchData = async () => {
+      let json = await fetch('http://localhost:5050/products');
+      json = await json.json();
+      setProducts(json);
+    }
+    fetchData()
+  };
+
   return (
     <div className=''>
         <table>
@@ -27,7 +43,7 @@ function Products({products, setProducts}) {
             <tbody >
                 {
                 products.map((product) => (
-                    <Product key={product.id} Product={product} onDelete={deleteProduct}/>
+                    <Product key={product.id} Product={product} onDelete={deleteProduct} handleSave={handleSave}/>
                 ))
                 }
             </tbody>

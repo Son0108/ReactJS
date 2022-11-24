@@ -1,60 +1,56 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "title": "Iphone X",
-            "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-            "price": 40,
-            "discountPercentage": 2.92,
-            "rating": 4.92,
-            "stock": 54,
-            "brand": "Golden",
-            "category": "home-decoration",
-            "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
-            "image": 
-              "https://dummyjson.com/image/i/products/30/1.jpg"
-          },
-          {
-            "id": 2,
-            "title": "Pixel 4",
-            "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-            "price": 30,
-            "discountPercentage": 2.92,
-            "rating": 4.92,
-            "stock": 54,
-            "brand": "red",
-            "category": "home-decoration",
-            "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
-            "image": 
-              "https://dummyjson.com/image/i/products/30/1.jpg"
-          },
-          {
-            "id": 3,
-            "title": "Xiaomi note10",
-            "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-            "price": 30,
-            "discountPercentage": 2.92,
-            "rating": 4.92,
-            "stock": 54,
-            "brand": "black",
-            "category": "home-decoration",
-            "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
-            "image": 
-              "https://dummyjson.com/image/i/products/30/1.jpg"
-          },
-          {
-            "id": 4,
-            "title": "Oppo A5",
-            "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
-            "price": 30,
-            "discountPercentage": 2.92,
-            "rating": 4.92,
-            "stock": 54,
-            "brand": "white",
-            "category": "home-decoration",
-            "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
-            "image": 
-              "https://dummyjson.com/image/i/products/30/1.jpg"
-          }
-    ]
+  "products": [
+    {
+      "id": 1,
+      "title": "Iphone X",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 40,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "Golden",
+      "category": "home-decoration",
+      "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
+      "image": "https://dummyjson.com/image/i/products/30/1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Pixel 4",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "red",
+      "category": "home-decoration",
+      "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
+      "image": "https://dummyjson.com/image/i/products/30/1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Xiaomi note10 ss",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "black",
+      "category": "home-decoration",
+      "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
+      "image": "https://dummyjson.com/image/i/products/30/1.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Oppo A5",
+      "description": "Attractive DesignMetallic materialFour key hooksReliable & DurablePremium Quality",
+      "price": 30,
+      "discountPercentage": 2.92,
+      "rating": 4.92,
+      "stock": 54,
+      "brand": "white",
+      "category": "home-decoration",
+      "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
+      "image": "https://dummyjson.com/image/i/products/30/1.jpg"
+    }
+  ]
 }

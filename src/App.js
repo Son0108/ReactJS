@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Products from './Products/Products';
-import {Route, Link, NavLink, Routes, Outlet } from 'react-router-dom';
+import {Route, Routes } from 'react-router-dom';
 import About from './About';
 
 
@@ -13,7 +13,6 @@ function App() {
       json = await json.json();
       setProducts(json);
     }
-  
     fetchData()
   },[])
   
@@ -33,7 +32,7 @@ function App() {
       </div>
       <div className='content'>
       <Routes>
-        <Route path="/"element={<Products products={products}/>}/>
+        <Route path="/"element={<Products products={products} setProducts={setProducts}/>}/>
         <Route path="/about" element={<About/>}/>
       </Routes>
       </div>
