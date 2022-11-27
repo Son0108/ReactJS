@@ -5,7 +5,6 @@ import './Popup.css'
 function Popup({Props, idSelect, trigger, setTrigger, handleSave}) {
 
     const [detail,setDetail] = useState({
-        id: Props.id,
         title:Props.title,
         description:Props.description,
         price:Props.price,

@@ -51,6 +51,19 @@
       "category": "home-decoration",
       "thumbnail": "https://dummyjson.com/image/i/products/30/thumbnail.jpg",
       "image": "https://dummyjson.com/image/i/products/30/1.jpg"
+    },
+    {
+      "title": "hdhd",
+      "description": "dsjd",
+      "price": "djshsjd",
+      "discountPercentage": "jhdsjhd",
+      "rating": "dsjhsjd",
+      "stock": "jhdsds",
+      "brand": "",
+      "category": "",
+      "thumbnail": "",
+      "image": "",
+      "id": "5"
     }
   ]
 }
