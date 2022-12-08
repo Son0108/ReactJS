@@ -90,7 +90,7 @@ if(searchValue !== "") {
             </thead>
             <tbody >
                 {
-                products.filter(productFilter => productFilter.title == searchValue).map((product) => (
+                products.filter(productFilter => productFilter.title.substr(0,searchValue.length) == searchValue).map((product) => (
                     <Product key={product.id} Product={product} onDelete={deleteProduct} handleSave={handleSave}/>
                 ))
                 }
