@@ -6,6 +6,8 @@ import './Products.css'
 
 function Products({products, setProducts}) {
   const [buttonPopups, setButtonPopups] = useState(false);
+  const [inputValue, setInputValue] = useState("")
+  const [searchValue, setSearchVlaue] = useState("")
   const [details, setDetails] = useState({
     id:"",
     title:"",
@@ -59,8 +61,53 @@ const handleSave = async (idSelect, detail, setTrigger) => {
   fetchData()
 };
 
+const handleInput = (e) => {
+  setInputValue(e.target.value);
+}
+
+const handleSearch = () => {
+  setSearchVlaue(inputValue);
+}
+
+if(searchValue !== "") {
   return (
-    <div className=''>
+    <div >
+      <div className='search'>
+        <input onChange={handleInput}></input>
+        <Button handle={handleSearch} title='Search' color="blue"/>
+      </div>
+      <br/>
+        <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Stock</th>
+                <th>Brand</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody >
+                {
+                products.filter(productFilter => productFilter.title == searchValue).map((product) => (
+                    <Product key={product.id} Product={product} onDelete={deleteProduct} handleSave={handleSave}/>
+                ))
+                }
+            </tbody>
+        </table>
+        <Button handle={()=> setButtonPopups(true)} color="blue" title="ADD"/>
+        <Popup Props={details} trigger={buttonPopups} setTrigger={setButtonPopups} handleSave={handleAdd}/>
+    </div>
+  )
+} else {
+  return (
+    <div >
+      <div className='search'>
+        <input onChange={handleInput}></input>
+        <Button handle={handleSearch} title='Search' color="blue"/>
+      </div>
+      <br/>
         <table>
             <thead>
               <tr>
@@ -84,6 +131,7 @@ const handleSave = async (idSelect, detail, setTrigger) => {
         <Popup Props={details} trigger={buttonPopups} setTrigger={setButtonPopups} handleSave={handleAdd}/>
     </div>
   )
+}
 }
 
 
